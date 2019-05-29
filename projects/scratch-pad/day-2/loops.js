@@ -13,8 +13,9 @@
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
   
-  
-  
+for (var index = 0; index <= array.length-1; index++) {
+  console.log(array[index]);
+}   
   
   // YOUR CODE ABOVE HERE //
 }
@@ -25,7 +26,9 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+for (var index = array.length-1; index >=0; index--) {
+  console.log(array[index]);
+}
   
   
   
@@ -37,10 +40,11 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
+  var arrayObjectKeys = [];
+  for (var key in object) {
+    arrayObjectKeys.push(key);
+  }
+  return arrayObjectKeys;
   // YOUR CODE ABOVE HERE //
 }
 
@@ -50,7 +54,9 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object) {
+    console.log(key);
+  }
   
   
   
@@ -62,8 +68,11 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  var arrayObjectValues = [];
+  for (var key in object) {
+    arrayObjectValues.push(object[key]);
+  }
+  return arrayObjectValues;
   
   
   // YOUR CODE ABOVE HERE //
@@ -75,7 +84,9 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object) {
+    console.log(object[key]);
+  }
   
   
   
@@ -87,9 +98,11 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
+  var arrayLength = [];
+  for (var key in object) {
+    arrayLength.push(key);
+  }
+  return arrayLength.length;
   
   // YOUR CODE ABOVE HERE //
 }
@@ -100,9 +113,13 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
+var arrayReversePrint = [];
+for (var key in object) {
+  arrayReversePrint.push(object[key]);
+}
+for (var index = arrayReversePrint.length-1; index >= 0; index--) {
+  console.log(arrayReversePrint[index]);
+}
   
   // YOUR CODE ABOVE HERE //
 }

@@ -12,7 +12,19 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
-
+for (var i = 1; i <=100; i++) {
+    // if x = multiple of 5 && multiple of 3 print "FizzBuzz"
+    if (i%15 === 0) {console.log("FizzBuzz");
+    }
+    // else if x = multiple of 3 print "Fizz"
+    else if (i%3 === 0) {console.log("Fizz");
+    }
+    // else if x = multiple of 5 print "Buzz"
+    else if (i%5 === 0) {console.log("Buzz");
+    }
+    // else print x 
+    else console.log(i);
+}
 
 
     // YOUR CODE GOES ABOVE HERE //

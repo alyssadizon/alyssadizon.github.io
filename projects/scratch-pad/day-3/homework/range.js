@@ -23,12 +23,29 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    let outputArray = [];
     
+    if (start > end) {
+        var count = start;
+        while (count >= end) {
+            outputArray.push(count);
+            count--;
+             }
+        }
     
+    else if (start < end) {
+        var count = start;
+        while (count <= end) {
+            outputArray.push(count);
+            count++;
+            }
+        }
+        
+    return outputArray; 
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+};
 
 
 

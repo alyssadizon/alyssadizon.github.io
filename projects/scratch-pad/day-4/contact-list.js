@@ -37,23 +37,64 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    return {
+        id: id, 
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    }; 
 } 
-
 
 function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = []; 
     
     return {
         // we implemented the length api for you //
         length: function() {
-            return contacts.length;
+            return contacts.length; 
+        },
+        addContact: function(contact) {
+            contacts.push(contact)
+        }, 
+        findContact: function(fullName) {
+          for (var i = 0; i < contacts.length; i++) {
+              if (contacts[i].nameFirst + " " + contacts[i].nameLast === fullName) {
+                  return contacts[i];
+              }
+                else {
+                    return undefined;
+                } 
+          }
+        }, 
+        removeContact: function(contact) {
+            contacts.pop();
+        },
+        printAllContactNames: function() {
+                var wholeNameArray = []; 
+            for (var i = 0; i < contacts.length; i++) {
+                wholeNameArray.push(contacts[i].nameFirst + " " + contacts[i].nameLast);
+            }
+            return wholeNameArray.join('\n');
         }
+        
     }
-}
+        
+    }
+
+/* BONUS : add a printAllContactNames() Function to your makeContactList() factory, so that the 
+ *         contact-list returned has an all() API. The printAllContactNames() Function should 
+ *         return a String formated with all the full-names of the separated 
+ *         with a line-break (/n), like so:
+ *          
+ *         myContacts.printAllContactNames(); // => Max Gaudin
+ *                                                  John Fraboni
+ *                                                  Your Mom
+ *          
+ *          WARNING: To pass the bonus test, the LAST full name should have NO
+ *          new-line character added after it!
+ */
 
 
 
